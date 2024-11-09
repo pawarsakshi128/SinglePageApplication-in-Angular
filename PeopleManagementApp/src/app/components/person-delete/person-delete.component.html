@@ -1,0 +1,6 @@
+<!-- person-delete.component.html -->
+<h2>Delete Person</h2>
+<p>Are you sure you want to delete <strong>{{ person.name }}</strong>?</p>
+
+<button (click)="deletePerson()" class="btn btn-danger">Yes, Delete</button>
+<button class="btn btn-secondary" routerLink="/">Cancel</button>

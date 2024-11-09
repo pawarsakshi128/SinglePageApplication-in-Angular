@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  
+  <ul>
+    <li *ngFor="let person of people">
+      {{ person.name }}
+      <button (click)="editItem(person)" class="edit-btn">Edit</button>
+      <button (click)="deleteItem(person)" class="delete-btn">Delete</button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,32 @@
+<!-- person-edit.component.html -->
+<h2 *ngIf="person.id">Edit Person</h2>
+<h2 *ngIf="!person.id">Create Person</h2>
+
+<form (ngSubmit)="updatePerson()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="person.name" name="name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" class="form-control" id="age" [(ngModel)]="person.age" name="age" required />
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <select class="form-control" id="gender" [(ngModel)]="person.gender" name="gender" required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="mobileNumber">Mobile Number</label>
+    <input type="text" class="form-control" id="mobileNumber" [(ngModel)]="person.mobileNumber" name="mobileNumber" required />
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+  <button type="button" class="btn btn-secondary mt-3" routerLink="/">Cancel</button>
+</form>
